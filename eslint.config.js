@@ -19,5 +19,11 @@ export default defineConfig([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    rules: {
+      // flag variables that are declared but never used
+      '@typescript-eslint/no-unused-vars': ['error', { args: 'none', ignoreRestSiblings: true }],
+      // ensure async functions actually use await
+      'require-await': 'error',
+    },
   },
 ])
