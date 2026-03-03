@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
 @import 'tailwindcss';
 
 @theme {
-  --color-accent: #2563eb;
-  --color-accent-light: #3b82f6;
-  --color-marked: #dcfce7;
-  --color-marked-border: #22c55e;
-  --color-bingo: #fbbf24;
+  --color-primary: #9B6F47;
+  --color-primary-light: #B08959;
+  --color-accent: #C9956D;
+  --color-accent-light: #D4AF9E;
+  --color-surface: #FEF5F1;
+  --color-muted: #9D8680;
+  --color-espresso: #4A2F28;
+  --color-marked: #C9956D;
+  --color-marked-border: #9B6F47;
+  --color-bingo: #D4AF9E;
 }
 
 html,
@@ -16,6 +22,8 @@ body,
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  color: var(--color-espresso);
+  background-color: var(--color-surface);
   -webkit-tap-highlight-color: transparent;
 }
