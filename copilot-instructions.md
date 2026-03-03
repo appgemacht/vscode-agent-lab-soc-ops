@@ -40,6 +40,18 @@ UI tests may use `@testing-library/react` if needed – see `src/test/setup.ts`.
   `bg-accent` and `active:bg-accent-light`.
 - Use responsive (`@md:`) and container (`@container`) variants.
 
+## Design guide
+
+- **Purpose:** Keep UI cohesive, accessible, and on-brand across the app.
+- **Colors:** Prefer theme tokens like `bg-accent`, `bg-accent-light`, and their text-contrast tokens. Avoid purple gradients; use single-tone accents or subtle layered transparencies when needed.
+- **Typography:** Use the project `font-sans` stack for body and scale headings with Tailwind utilities (e.g. `text-lg`, `text-2xl`). Keep line-height comfortable (approx. 1.4–1.6).
+- **Spacing & layout:** Follow a 4px/8px rhythm via Tailwind spacing (`p-4`, `gap-4`, `mx-6`). Use containers and responsive variants for layout adjustments.
+- **Components:** Build lightweight, reusable patterns (buttons, cards, modals). Buttons should use consistent padding, `rounded-md`, and `transition-colors` for hover/active states.
+- **Icons & imagery:** Prefer optimized SVG icons, sized consistently (e.g. 16–24px). Provide accessible labels/alt text for images.
+- **Motion:** Keep motion subtle: `transition-colors duration-150 ease-in-out` and avoid large, attention-grabbing animations.
+- **Accessibility:** Maintain >=4.5:1 contrast for body text, keyboard-focus visible (`ring` utilities), and ensure interactive elements have accessible names/roles.
+- **When in doubt:** Open a quick PR describing the design decision and ask for a brief review — consistency matters more than novelty.
+
 ## Project quirks to watch
 - `useBingoGame.ts` serializes state with versioning; validation logic
 detects schema drift and clears storage.
